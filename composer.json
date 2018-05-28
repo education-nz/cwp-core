@@ -1,0 +1,40 @@
+{
+    "name": "education/cwp-core",
+    "description": "Common Web Platform",
+    "type": "silverstripe-vendormodule",
+    "autoload": {
+        "psr-4": {
+            "Education\\Cwp\\": "src/",
+            "Education\\Cwp\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "cwp/cwp": "2.x-dev",
+        "cwp/cwp-core": "2.x-dev",
+        "cwp/cwp-search": "1.x-dev",
+        "silverstripe/asset-admin": "^1.0@dev",
+        "silverstripe/hybridsessions": "^2@dev",
+        "silverstripe/environmentcheck": "^2@dev",
+        "silverstripe/auditor": "^2@dev",
+        "silverstripe/userforms": "5.0.x-dev",
+        "symbiote/silverstripe-gridfieldextensions": "^3.1",
+        "silverstripe/errorpage": "1.x-dev",
+        "unclecheese/display-logic": "2.0.1",
+        "education/google-analytics": "2.x-dev",
+        "wilr/silverstripe-googlesitemaps": "2.x-dev",
+        "silverstripe/gridfieldqueuedexport": "2.x-dev",
+        "undefinedoffset/silverstripe-nocaptcha": "2.0.x-dev",
+        "education/tinymce-config": "dev-master",
+        "phpunit/phpunit": "^5.7",
+        "squizlabs/php_codesniffer": "^3",
+        "mockery/mockery": "dev-master@dev",
+        "silverstripe/sqlite3": "^2"
+    },
+    "extra": {
+
+    },
+    "scripts": {
+        "lint": "phpcs src/ tests/",
+        "lint-clean": "phpcbf src/ tests/"
+    }
+}
