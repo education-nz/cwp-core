@@ -31,7 +31,9 @@
         "silverstripe/sqlite3": "^2"
     },
     "extra": {
-
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
     },
     "scripts": {
         "lint": "phpcs src/ tests/",
