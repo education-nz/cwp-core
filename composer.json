@@ -1,6 +1,6 @@
 {
     "name": "education/cwp-core",
-    "description": "Common Web Platform",
+    "description": "Common Web Platform base for all Education.govt.nz websites",
     "type": "silverstripe-vendormodule",
     "autoload": {
         "psr-4": {
