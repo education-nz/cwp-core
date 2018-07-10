@@ -1,0 +1,6 @@
+---
+Name: education-cwp
+---
+SilverStripe\Reports\ReportAdmin:
+  extensions:
+    - Education\Cwp\Extension\ReportAdminExtension
