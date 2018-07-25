@@ -4,3 +4,28 @@ Name: education-cwp
 SilverStripe\Reports\ReportAdmin:
   extensions:
     - Education\Cwp\Extension\ReportAdminExtension
+SilverStripe\CMS\Model\SiteTree:
+  create_default_pages: false
+SilverStripe\ORM\Connect\DBSchemaManager:
+  fix_table_case_on_build: true
+SilverStripe\Core\Injector\Injector:
+  MySQLSchemaManager:
+    class: 'Education\Cwp\PatchedMySQLSchemaManager'
+---
+Name: live-errors
+Except:
+  environment: dev
+---
+SilverStripe\Core\Injector\Injector:
+  Psr\Log\LoggerInterface:
+    calls:
+      pushSlackHandler: [ pushHandler, [ %$SlackHandler ]]
+  SlackHandler:
+    class: Education\Cwp\EducationSlackHandler
+    constructor:
+      - "xoxp-392085571414-392248973351-404384279696-9eef62f51674a4506e7fca69fede5e61"
+      - "cwp-logs"
+      - "graylog"
+      - true
+      - "fire"
+      - 250
