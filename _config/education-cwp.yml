@@ -1,5 +1,6 @@
 ---
 Name: education-cwp
+After: "databaseconnectors"
 ---
 SilverStripe\Reports\ReportAdmin:
   extensions:
@@ -11,6 +12,9 @@ SilverStripe\ORM\Connect\DBSchemaManager:
 SilverStripe\Core\Injector\Injector:
   MySQLSchemaManager:
     class: 'Education\Cwp\PatchedMySQLSchemaManager'
+CWP\Core\Control\InitialisationMiddleware:
+  egress_proxy_exclude_domains:
+    - slack.com
 ---
 Name: live-errors
 Except:
