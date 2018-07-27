@@ -4,6 +4,7 @@ namespace Education\Cwp;
 
 use Monolog\Handler\SlackHandler;
 use SilverStripe\Control\Director;
+use Exception;
 
 class EducationSlackHandler extends SlackHandler
 {
@@ -25,5 +26,20 @@ class EducationSlackHandler extends SlackHandler
         $username = Director::absoluteBaseURL();
 
         parent::__construct($token, $channel, $username, $useAttachment, $iconEmoji, $level, $bubble, $useShortAttachment, $includeContextAndExtra, $excludeFields);
+    }
+
+    /**
+     * {@inheritdoc}
+     *
+     * @param array $record
+     */
+    protected function write(array $record)
+    {
+        try {
+            parent::write($record);
+            $this->finalizeWrite();
+        } catch (Exception $e) {
+            //
+        }
     }
 }
