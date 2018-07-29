@@ -39,7 +39,7 @@ class EducationSlackHandler extends SlackHandler
             parent::write($record);
             $this->finalizeWrite();
         } catch (Exception $e) {
-            //
+            // exception when trying to write the record.
         }
     }
 }
