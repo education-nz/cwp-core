@@ -7,6 +7,11 @@ SilverStripe\Reports\ReportAdmin:
     - Education\Cwp\Extension\ReportAdminExtension
 SilverStripe\CMS\Model\SiteTree:
   create_default_pages: false
+  extensions:
+    - Education\Cwp\Extension\EducationSeoRecord
+SilverStripe\SiteConfig\SiteConfig:
+  extensions:
+    - 'Education\Cwp\Extension\EducationCwpSiteConfig'
 SilverStripe\ORM\Connect\DBSchemaManager:
   fix_table_case_on_build: true
 SilverStripe\Core\Injector\Injector:
@@ -15,6 +20,11 @@ SilverStripe\Core\Injector\Injector:
 CWP\Core\Control\InitialisationMiddleware:
   egress_proxy_exclude_domains:
     - slack.com
+SilverStripe\Admin\LeftAndMain:
+  extra_requirements_css:
+    - 'education/cwp-core:client/admin.css'
+SilverStripe\Control\Cookie:
+  report_errors: false
 #---
 #Name: live-errors
 #Except:

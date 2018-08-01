@@ -16,3 +16,24 @@ module provides standard fonts etc for ministry branding.
  * gazette.education.govt.nz
  * tec.govt.nz
  * youthguarantee.net.nz
+
+## What this doesn't include
+
+This module does not include front-end styles, pagetypes or anything like that
+at this stage. This module is focused on the backend. For generic front-end 
+styles and things like standard `education.govt.nz` footer check out the 
+`education-core` module.
+
+## Features
+
+### Include Standard Modules
+
+All CWP core, search, queued jobs and helpful additions.
+
+### Standard Reports
+
+Any editor can run the same generic reports.
+
+### Standard SEO 
+
+SEO metadata for consistent editing.

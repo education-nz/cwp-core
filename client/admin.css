@@ -1,0 +1,17 @@
+li[aria-controls="Root_FileTracking"],
+li[aria-controls="Root_LinkTracking"] {
+  display: none;
+}
+
+.notice-wrap {
+  pointer-events: none;
+}
+
+#Form_AddForm_PageType .valPage,
+#Form_AddForm_PageType .valCWP_CWP_PageTypes_NewsPage {
+  display: none; /* hide default class */
+}
+
+.col-buttons + .col-buttons {
+  padding-left: 0;
+}
