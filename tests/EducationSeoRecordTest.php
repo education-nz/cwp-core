@@ -27,7 +27,7 @@ class EducationSeoRecordTest extends FunctionalTest
 
         $body = $this->get($page->Link());
         $this->assertContains(
-            '<meta property="og:type" content="website" />', $body->getBody()
+            '<meta name="dcterms.type" content="Service"', $body->getBody()
         );
     }
 }
