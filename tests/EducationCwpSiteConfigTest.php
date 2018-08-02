@@ -8,6 +8,8 @@ use Silverstripe\SiteConfig\SiteConfig;
 
 class EducationCwpSiteConfigTest extends FunctionalTest
 {
+    protected $usesDatabase = true;
+
     public function testCMSFields()
     {
         $config = SiteConfig::current_site_config();
