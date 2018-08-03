@@ -37,3 +37,7 @@ Any editor can run the same generic reports.
 ### Standard SEO 
 
 SEO metadata for consistent editing.
+
+## Copyright
+
+Copyright 2018. All Rights Reserved Ministry of Education, NZ.
