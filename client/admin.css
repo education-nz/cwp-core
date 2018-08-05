@@ -7,11 +7,6 @@ li[aria-controls="Root_LinkTracking"] {
   pointer-events: none;
 }
 
-#Form_AddForm_PageType .valPage,
-#Form_AddForm_PageType .valCWP_CWP_PageTypes_NewsPage {
-  display: none; /* hide default class */
-}
-
 .col-buttons + .col-buttons {
   padding-left: 0;
 }
