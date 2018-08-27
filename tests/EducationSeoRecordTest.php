@@ -1,6 +1,6 @@
 <?php
 
-namespace Education\GoogleAnalytics\Tests;
+namespace Education\Cwp\Tests;
 
 use SilverStripe\Dev\FunctionalTest;
 use SilverStripe\Forms\FieldList;

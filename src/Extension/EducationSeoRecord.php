@@ -9,7 +9,7 @@ use SilverStripe\Forms\DropdownField;
 use SilverStripe\View\ArrayData;
 use SilverStripe\Lumberjack\Model\Lumberjack;
 use SilverStripe\SiteConfig\SiteConfig;
-
+use InvalidArgumentException;
 /**
  * Adds social meta tags to a record.
  *
@@ -77,12 +77,16 @@ class EducationSeoRecord extends DataExtension
         ]);
 
         if (!$templateData->MetaKeywords) {
-            $keywords = $this->owner->getManyManyComponents('Terms');
+            try {
+                $keywords = $this->owner->getManyManyComponents('Terms');
 
-            if ($keywords->count()) {
-                $tags = implode(', ', $keywords->map('ID', 'Name')->values());
+                if ($keywords->count()) {
+                    $tags = implode(', ', $keywords->map('ID', 'Name')->values());
 
-                $templateData->setField('MetaKeywords', $tags);
+                    $templateData->setField('MetaKeywords', $tags);
+                }
+            } catch (InvalidArgumentException $e) {
+                // no keywords
             }
         }
 
