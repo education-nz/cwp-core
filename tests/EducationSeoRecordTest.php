@@ -30,7 +30,7 @@ class EducationSeoRecordTest extends FunctionalTest
         $body = $page->renderWith('Education\Cwp\Includes\Meta');
 
         $this->assertContains(
-            '<meta name="dcterms.type" content="Service"', $body->getBody()
+            '<meta name="dcterms.type" content="Service"', $body
         );
     }
 }
