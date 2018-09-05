@@ -9,6 +9,8 @@ use Page;
 
 class EducationSeoRecordTest extends FunctionalTest
 {
+    protected static $fixture_file = 'fixtures.yml';
+
     public function testCMSFields()
     {
         $page = new Page();
@@ -25,7 +27,8 @@ class EducationSeoRecordTest extends FunctionalTest
         $page->write();
         $page->publishRecursive();
 
-        $body = $this->get($page->Link());
+        $body = $page->renderWith('Education\Cwp\Includes\Meta');
+
         $this->assertContains(
             '<meta name="dcterms.type" content="Service"', $body->getBody()
         );
