@@ -31,7 +31,8 @@
         "wilr/silverstripe-googlesitemaps": "2.x-dev",
         "undefinedoffset/silverstripe-nocaptcha": "2.0.x-dev",
         "jonom/silverstripe-betternavigator": "dev-master",
-        "unclecheese/display-logic": "2.0.1"
+        "unclecheese/display-logic": "2.0.1",
+        "silverstripe-terraformers/embargo-expiry": "^1.0@RC"
     },
     "extra": {
         "branch-alias": {

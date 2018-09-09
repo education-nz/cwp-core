@@ -9,6 +9,7 @@ SilverStripe\CMS\Model\SiteTree:
   create_default_pages: false
   extensions:
     - Education\Cwp\Extension\EducationSeoRecord
+    - Terraformers\EmbargoExpiry\Extension\EmbargoExpiryExtension
 SilverStripe\SiteConfig\SiteConfig:
   extensions:
     - 'Education\Cwp\Extension\EducationCwpSiteConfig'
@@ -25,6 +26,9 @@ SilverStripe\Admin\LeftAndMain:
     - 'education/cwp-core:client/admin.css'
 SilverStripe\Control\Cookie:
   report_errors: false
+SilverStripe\CMS\Controllers\CMSMain:
+  extensions:
+    - Terraformers\EmbargoExpiry\Extension\EmbargoExpiryCMSMainExtension
 #---
 #Name: live-errors
 #Except:
