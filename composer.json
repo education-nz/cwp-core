@@ -20,7 +20,7 @@
         "silverstripe/spellcheck": "^2.1",
         "silverstripe/userforms": "5.0.x-dev",
         "silverstripe/iframe": "2.0.x-dev",
-        "silverstripe/tagfield": "2.2.x-dev",
+        "silverstripe/tagfield": "2.1",
         "silverstripe/sqlite3": "^2",
         "silverstripe/gridfieldqueuedexport": "2.x-dev",
         "education/google-analytics": "2.x-dev",
