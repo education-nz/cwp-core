@@ -18,6 +18,8 @@ SilverStripe\ORM\Connect\DBSchemaManager:
 SilverStripe\Core\Injector\Injector:
   MySQLSchemaManager:
     class: 'Education\Cwp\PatchedMySQLSchemaManager'
+  SilverStripe\Assets\Storage\ProtectedFileController:
+    class: 'Education\Cwp\LegacyProtectedFileController'
 CWP\Core\Control\InitialisationMiddleware:
   egress_proxy_exclude_domains:
     - slack.com
