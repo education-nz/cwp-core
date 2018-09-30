@@ -28,6 +28,7 @@ class TrailingSlashRedirector implements HTTPMiddleware
             }
 
             if (!Director::is_ajax() &&
+                !Director::is_cli() &&
                 !isset($urlPathInfo['extension']) &&
                 empty($params) &&
                 !preg_match('/^' . preg_quote($expected_url, '/') . '(?!\/)/i', $requested_url)
