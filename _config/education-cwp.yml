@@ -31,6 +31,7 @@ SilverStripe\Control\Cookie:
 SilverStripe\CMS\Controllers\CMSMain:
   extensions:
     - Terraformers\EmbargoExpiry\Extension\EmbargoExpiryCMSMainExtension
+
 #---
 #Name: live-errors
 #Except:
