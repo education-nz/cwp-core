@@ -27,6 +27,8 @@
         "education/tasker": "dev-master",
         "education/tinymce-config": "dev-master",
         "education/login-screen": "2.x-dev",
+        "silverstripe/sharedraftcontent": "^2.0@dev",
+        "axllent/silverstripe-trailing-slash": "^2.1",
         "wilr/silverstripe-googlesitemaps": "2.x-dev",
         "undefinedoffset/silverstripe-nocaptcha": "2.0.x-dev",
         "jonom/silverstripe-betternavigator": "dev-master",
