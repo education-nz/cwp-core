@@ -1,0 +1,9 @@
+Symbiote\QueuedJobs\Jobs\CleanupJob:
+  is_enabled: true
+  cleanup_method: "age"
+  cleanup_value: 10
+  cleanup_statuses:
+    - Broken
+    - Complete
+SilverStripe\Control\Email\Email:
+  queued_job_admin_email: web.services@education.govt.nz
