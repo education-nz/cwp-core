@@ -10,3 +10,9 @@ li[aria-controls="Root_LinkTracking"] {
 .col-buttons + .col-buttons {
   padding-left: 0;
 }
+
+// ED-45, don't make long menus go off the page.
+.cms #vakata-contextmenu li ul {
+  max-height: 200px;
+  overflow: scroll;
+}
