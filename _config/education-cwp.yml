@@ -31,7 +31,8 @@ SilverStripe\Control\Cookie:
 SilverStripe\CMS\Controllers\CMSMain:
   extensions:
     - Terraformers\EmbargoExpiry\Extension\EmbargoExpiryCMSMainExtension
-
+SilverStripe\AssetAdmin\Forms\FileFormFactory:
+  show_history: true
 #---
 #Name: live-errors
 #Except:
