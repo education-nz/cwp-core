@@ -40,10 +40,8 @@ class RecentlyEditedReport extends Report
             ->sort("\"SiteTree\".\"LastEdited\" DESC");
 
         if (isset($params['Since'])) {
-            $start = explode('/', $params['Since']);
-            $start = $start[2] . '-'. $start[1] .'-'. $start[0];
             $records = $records->filter([
-                "LastEdited:GreaterThanEqual" => $start
+                "LastEdited:GreaterThanOrEqual" => $params['Since']
             ]);
         }
 
