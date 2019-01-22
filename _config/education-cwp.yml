@@ -5,6 +5,9 @@ After: "databaseconnectors"
 SilverStripe\Reports\ReportAdmin:
   extensions:
     - Education\Cwp\Extension\ReportAdminExtension
+SilverStripe\Reports\Reports:
+  excluded_reports:
+    - SilverStripe\CMS\Reports\RecentlyEditedReport
 SilverStripe\CMS\Model\SiteTree:
   create_default_pages: false
   extensions:
