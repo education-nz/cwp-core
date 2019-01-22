@@ -14,5 +14,6 @@ li[aria-controls="Root_LinkTracking"] {
 /*ED-45, don't make long menus go off the page. */
 .cms #vakata-contextmenu li ul {
   max-height: 200px;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
