@@ -30,6 +30,11 @@ class EducationCwpSiteConfig extends DataExtension
         'DefaultFeaturedOGImage'  => Image::class,
     ];
 
+    private static $owns = [
+        'DefaultFeaturedOGImage',
+        'DefaultFeaturedImage'
+    ];
+
     public function updateCMSFields(FieldList $fields)
     {
         $featuredImageField = UploadField::create('DefaultFeaturedImage',
