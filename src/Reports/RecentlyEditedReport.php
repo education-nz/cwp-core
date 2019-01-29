@@ -41,7 +41,7 @@ class RecentlyEditedReport extends Report
 
         if (isset($params['Since'])) {
             $records = $records->filter([
-                "LastEdited:GreaterThanOrEqual" => $params['Since']
+                "LastEdited:GreaterThanOrEqual" => $params['Since'] . ' 00:00:00'
             ]);
         }
 
@@ -51,15 +51,15 @@ class RecentlyEditedReport extends Report
     public function columns()
     {
         return array(
-            "Title" => array(
+            "Title" => [
                 "title" => "Title",
-            ),
+                'link' => true
+            ],
             "LastEdited" => [
                 "title" => 'Last Edited'
             ],
-            "Link" => [
-                'title' => 'Link',
-                'link' => true
+            "Breadcrumbs" => [
+                'title' => 'Link'
             ]
         );
     }

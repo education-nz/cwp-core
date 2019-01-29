@@ -29,6 +29,8 @@ CWP\Core\Control\InitialisationMiddleware:
 SilverStripe\Admin\LeftAndMain:
   extra_requirements_css:
     - 'education/cwp-core:client/admin.css'
+  extra_requirements_javascript:
+    - 'education/cwp-core:client/dist/js/educationcwp.js'
 SilverStripe\Control\Cookie:
   report_errors: false
 SilverStripe\CMS\Controllers\CMSMain:
@@ -36,21 +38,3 @@ SilverStripe\CMS\Controllers\CMSMain:
     - Terraformers\EmbargoExpiry\Extension\EmbargoExpiryCMSMainExtension
 SilverStripe\AssetAdmin\Forms\FileFormFactory:
   show_history: true
-#---
-#Name: live-errors
-#Except:
-#  environment: dev
-#---
-#SilverStripe\Core\Injector\Injector:
-#  Psr\Log\LoggerInterface:
-#    calls:
-#      pushSlackHandler: [ pushHandler, [ %$SlackHandler ]]
-#  SlackHandler:
-#    class: Education\Cwp\EducationSlackHandler
-#    constructor:
-#      - "xoxp-392085571414-392248973351-404384279696-9eef62f51674a4506e7fca69fede5e61"
-#      - "cwp-logs"
-#      - "graylog"
-#      - true
-#      - "fire"
-#      - 250
