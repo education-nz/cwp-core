@@ -6,6 +6,10 @@ Injector.transform(
     updater.form.addValidation(
       'AssetAdmin.*',
       (values, Validation) => {
+        if (typeof values.AltText === 'undefined') {
+          return;
+        }
+
         const alt = (!values.AltText || values.AltText.length < 1) ? 'Alt text is required' : null
 
         if (alt) {

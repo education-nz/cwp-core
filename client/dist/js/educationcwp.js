@@ -77,7 +77,10 @@
 
 __WEBPACK_IMPORTED_MODULE_0_lib_Injector___default.a.transform('require-alt-text', function (updater) {
   updater.form.addValidation('AssetAdmin.*', function (values, Validation) {
-    console.log('hi2');
+    if (typeof values.AltText === 'undefined') {
+      return;
+    }
+
     var alt = !values.AltText || values.AltText.length < 1 ? 'Alt text is required' : null;
 
     if (alt) {
