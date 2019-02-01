@@ -35,9 +35,6 @@
         "silverstripe-terraformers/embargo-expiry": "^1.0@RC"
     },
     "extra": {
-        "branch-alias": {
-            "dev-master": "1.x-dev"
-        },
         "expose": [
             "client"
         ]
