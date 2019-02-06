@@ -15,7 +15,7 @@
         "squizlabs/php_codesniffer": "^3",
         "mockery/mockery": "dev-master@dev",
         "cwp/cwp-recipe-search": "*",
-        "cwp/cwp-recipe-cms": "2.x-dev",
+        "cwp/cwp-recipe-cms": "^2.2",
         "silverstripe/contentreview": "^4.1",
         "silverstripe/spellcheck": "^2.1",
         "silverstripe/userforms": "^5.0",
@@ -36,7 +36,8 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.x-dev"
+            "dev-master": "1.x-dev",
+            "dev-1.0": "1.0.x-dev"
         },
         "expose": [
             "client"
