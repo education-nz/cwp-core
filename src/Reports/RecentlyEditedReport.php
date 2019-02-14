@@ -8,6 +8,8 @@ use SilverStripe\ORM\DataObject;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\DateField;
 use SilverStripe\Reports\Report;
+use SilverStripe\Core\Injector\Injector;
+use SilverStripe\Control\HTTPRequest;
 
 class RecentlyEditedReport extends Report
 {
@@ -38,6 +40,11 @@ class RecentlyEditedReport extends Report
     {
         $records = SiteTree::get()
             ->sort("\"SiteTree\".\"LastEdited\" DESC");
+
+        if (empty($params)) {
+            $request = Injector::inst()->get(HTTPRequest::class);
+            $params = $request->requestVar('filters') ?: [];
+        }
 
         if (isset($params['Since'])) {
             $records = $records->filter([
