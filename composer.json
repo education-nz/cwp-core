@@ -47,8 +47,22 @@
         "lint": "phpcs src/ tests/",
         "lint-clean": "phpcbf src/ tests/"
     },
-    "repositories": [{
-        "type": "composer",
-        "url": "https://packages.educationweb.services"
-    }]
+    "repositories": [
+    {
+        "type": "vcs",
+        "url": "git@github.com:education-nz/google-analytics.git"
+    },
+    {
+        "type": "vcs",
+        "url": "git@github.com:education-nz/tasker.git"
+    },
+    {
+        "type": "vcs",
+        "url": "git@github.com:education-nz/tinymce-config.git"
+    },
+    {
+        "type": "vcs",
+        "url": "git@github.com:education-nz/login-screen.git"
+    }
+  ]
 }
