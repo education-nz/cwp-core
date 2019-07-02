@@ -26,7 +26,7 @@
         "education/google-analytics": "dev-master",
         "education/tasker": "dev-master",
         "education/tinymce-config": "dev-master",
-        "education/login-screen": "dev-master",
+        "education/login-screen": "2.x-dev",
         "silverstripe/sharedraftcontent": "^2.0@dev",
         "wilr/silverstripe-googlesitemaps": "2.x-dev",
         "undefinedoffset/silverstripe-nocaptcha": "2.0.x-dev",
@@ -41,6 +41,21 @@
         },
         "expose": [
             "client"
+        ],
+        "project-files-installed": [
+            "app/.htaccess",
+            "app/_config.php",
+            "app/_config/environmentcheck.yml",
+            "app/_config/mysite.yml",
+            "app/src/Page.php",
+            "app/src/PageController.php"
+        ],
+        "public-files-installed": [
+            ".htaccess",
+            "index.php",
+            "install-frameworkmissing.html",
+            "install.php",
+            "web.config"
         ]
     },
     "scripts": {
@@ -48,21 +63,21 @@
         "lint-clean": "phpcbf src/ tests/"
     },
     "repositories": [
-    {
-        "type": "vcs",
-        "url": "git@github.com:education-nz/google-analytics.git"
-    },
-    {
-        "type": "vcs",
-        "url": "git@github.com:education-nz/tasker.git"
-    },
-    {
-        "type": "vcs",
-        "url": "git@github.com:education-nz/tinymce-config.git"
-    },
-    {
-        "type": "vcs",
-        "url": "git@github.com:education-nz/login-screen.git"
-    }
-  ]
+        {
+            "type": "vcs",
+            "url": "git@github.com:education-nz/google-analytics.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:education-nz/tasker.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:education-nz/tinymce-config.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:education-nz/login-screen.git"
+        }
+    ]
 }
