@@ -16,7 +16,7 @@
         "mockery/mockery": "dev-master@dev",
         "cwp/cwp-recipe-search": "*",
         "cwp/cwp-recipe-cms": "^2.5",
-        "sentry/sdk": "^2.3",
+        "sentry/sdk": "^2.1",
         "silverstripe/contentreview": "^4.1",
         "silverstripe/spellcheck": "^2.1",
         "silverstripe/userforms": "^5.0",
