@@ -10,6 +10,8 @@ use SilverStripe\View\ArrayData;
 use SilverStripe\Lumberjack\Model\Lumberjack;
 use SilverStripe\SiteConfig\SiteConfig;
 use InvalidArgumentException;
+use SilverStripe\Control\Controller;
+
 /**
  * Adds social meta tags to a record.
  *
@@ -70,10 +72,12 @@ class EducationSeoRecord extends DataExtension
             'MetaDesc'     => ($this->owner->MetaDescription) ? $this->owner->MetaDescription : $this->owner->Introduction,
             'MetaFacebook'   => ($config->FacebookURL) ?: '',
             'MetaURL'        => $this->owner->AbsoluteLink(),
+            'ContentLocale' => Controller::curr()->ContentLocale,
             'MetaType'       => $type,
             'MetaSite'       => $config->Title,
             'MetaLastEdited' => date('c', $this->owner->dbObject('LastEdited')->getTimestamp()),
-            'MetaPublished'  => date('c', $this->owner->dbObject('Created')->getTimestamp())
+            'MetaPublished'  => date('c', $this->owner->dbObject('Created')->getTimestamp()),
+            'FeaturedImage' => ($this->owner->hasMethod('FeaturedImage')) ? $this->owner->FeaturedImage() : null
         ]);
 
         if (!$templateData->MetaKeywords) {

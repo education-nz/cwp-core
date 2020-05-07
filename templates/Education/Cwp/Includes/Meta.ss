@@ -6,8 +6,8 @@
 
         <meta property="og:title" content="<% if $MetaTitle %>$MetaTitle.ATT<% else %>$Title.ATT<% end_if %>" />
         <meta property="og:site_name" content="$SiteConfig.Title.ATT"/>
-        <meta property="og:url" content="$AbsoluteLink.ATT" />
-        <meta property="og:description" content="$MetaDescription.ATT" />
+        <meta property="og:url" content="$MetaURL.ATT" />
+        <meta property="og:description" content="$MetaDesc.ATT" />
         <meta property="og:type" content="$MetaType.ATT" />
         <meta property="og:locale" content="$ContentLocale.ATT" />
         <meta property="fb:app_id" content="$SiteConfig.FacebookURL.ATT" />
