@@ -16,6 +16,9 @@ SilverStripe\CMS\Model\SiteTree:
 SilverStripe\SiteConfig\SiteConfig:
   extensions:
     - 'Education\Cwp\Extension\EducationCwpSiteConfig'
+SilverStripe\Assets\File:
+  extensions:
+    - 'Education\Cwp\Extension\EducationFileExtension'
 SilverStripe\ORM\Connect\DBSchemaManager:
   fix_table_case_on_build: true
 SilverStripe\Core\Injector\Injector:
@@ -38,3 +41,6 @@ SilverStripe\CMS\Controllers\CMSMain:
     - Terraformers\EmbargoExpiry\Extension\EmbargoExpiryCMSMainExtension
 SilverStripe\AssetAdmin\Forms\FileFormFactory:
   show_history: true
+SilverStripe\AssetAdmin\Forms\FileFormFactory:
+  extensions:
+    - 'Education\Cwp\Extension\ImageFormFactoryExtension'
