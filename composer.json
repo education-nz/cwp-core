@@ -32,6 +32,7 @@
         "undefinedoffset/silverstripe-nocaptcha": "2.0.x-dev",
         "jonom/silverstripe-betternavigator": "dev-master",
         "unclecheese/display-logic": "2.0.1",
+        "quinninteractive/silverstripe-seo": "^1.0.12",
         "silverstripe-terraformers/embargo-expiry": "^1.0@RC",
         "benmanu/silverstripe-styleguide": "^0.1"
     },

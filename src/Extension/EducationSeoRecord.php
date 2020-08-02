@@ -19,29 +19,11 @@ use SilverStripe\Control\Controller;
 class EducationSeoRecord extends DataExtension
 {
     private static $db = [
-        'MetaTitle'    => 'Text',
-        'MetaKeywords' => 'Text',
         'MetaDCType'   => "Enum('Collection, Dataset, Event, Image, InteractiveResource, MovingImage, PhysicalObject, Service, Software, Sound, StillImage, Text', 'Text')",
-        'MetaAuthor'   => 'Text',
     ];
 
     public function updateCMSFields(FieldList $fields)
     {
-        $fields->removeFieldFromTab('Root.Main', 'Metadata');
-
-        $metaKeywordsField = TextField::create('MetaKeywords', 'Meta keywords')
-            ->setRightTitle('Seperate keywords with a comma eg. keyword1, keyword2, keyword3.');
-
-        $fields->addFieldToTab('Root.Metadata', $metaKeywordsField);
-
-        $metaDescField = TextField::create('MetaDescription', 'Meta description');
-        $fields->addFieldToTab('Root.Metadata', $metaDescField);
-
-        $metaTitleField = TextField::create('MetaTitle', 'Override page title')
-            ->setRightTitle('This only applies to the page title in the Meta Data.');
-
-        $fields->addFieldToTab('Root.Metadata', $metaTitleField);
-
         $metaDCTypeField = DropdownField::create('MetaDCType', 'Dublin Core type',
             $this->owner->dbObject('MetaDCType')->enumValues());
 
@@ -65,11 +47,7 @@ class EducationSeoRecord extends DataExtension
         }
 
         $templateData = new ArrayData([
-            'MetaTitle'    => ($this->owner->MetaTitle) ? strip_tags($this->owner->MetaTitle) : $this->owner->Title,
-            'MetaKeywords' => ($this->owner->MetaKeywords) ? strip_tags($this->owner->MetaKeywords) : '',
             'MetaDCType'   => ($this->owner->MetaDCType) ? $this->owner->MetaDCType : 'Text',
-            'MetaAuthor'   => ($this->owner->MetaAuthor) ? $this->owner->MetaAuthor : 'New Zealand Ministry of Education',
-            'MetaDesc'     => ($this->owner->MetaDescription) ? $this->owner->MetaDescription : $this->owner->Introduction,
             'MetaFacebook'   => ($config->FacebookURL) ?: '',
             'MetaURL'        => $this->owner->AbsoluteLink(),
             'ContentLocale' => Controller::curr()->ContentLocale,
