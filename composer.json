@@ -23,7 +23,7 @@
         "education/google-analytics": "dev-master",
         "wilr/silverstripe-tasker": "dev-master",
         "silverstripe/s3": "^1.0",
-        "phptek/sentry": "2.x",
+        "phptek/sentry": "3.x",
         "silverstripe/dynamodb": "^4.0",
         "education/tinymce-config": "dev-master",
         "education/login-screen": "2.x-dev",
