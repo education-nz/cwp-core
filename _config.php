@@ -3,6 +3,7 @@
 use SilverStripe\View\Parsers\ShortcodeParser;
 use SilverStripe\ORM\FieldType\DBHTMLText;
 use SilverStripe\Core\Convert;
+use SilverStripe\Core\Environment;
 
 ShortcodeParser::get('default')->register('current_request_uri', function ($args, $content = null, $parser = null, $t = null) {
     if (isset($_SERVER['REQUEST_URI'])) {
@@ -11,3 +12,7 @@ ShortcodeParser::get('default')->register('current_request_uri', function ($args
         return '';
     }
 });
+
+if ($dsn = Environment::getEnv('SENTRY_DSN')) {
+    Sentry\init(['dsn' => $dsn]);
+}
