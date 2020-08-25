@@ -24,7 +24,7 @@
         "education/google-analytics": "dev-master",
         "wilr/silverstripe-tasker": "dev-master",
         "silverstripe/s3": "^1.0",
-        "sentry/sdk": "^2.4",
+        "sentry/sdk": "^2.1",
         "silverstripe/dynamodb": "^4.0",
         "education/tinymce-config": "dev-master",
         "education/login-screen": "2.x-dev",
