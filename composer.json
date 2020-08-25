@@ -12,7 +12,7 @@
     "prefer-stable": true,
     "require": {
         "cwp/cwp-recipe-cms": "^2.5",
-	"silverstripe/serve": "^2.1",
+	    "silverstripe/serve": "^2.1",
         "silverstripe/redirectedurls": "^2.0",
         "silverstripe/contentreview": "^4.1",
         "silverstripe/spellcheck": "^2.1",
@@ -24,7 +24,7 @@
         "education/google-analytics": "dev-master",
         "wilr/silverstripe-tasker": "dev-master",
         "silverstripe/s3": "^1.0",
-        "phptek/sentry": "3.x",
+        "sentry/sdk: "^2.4",
         "silverstripe/dynamodb": "^4.0",
         "education/tinymce-config": "dev-master",
         "education/login-screen": "2.x-dev",
