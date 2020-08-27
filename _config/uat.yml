@@ -1,0 +1,8 @@
+---
+Name: educationuatbasicauth
+Only:
+  environment: test
+---
+SilverStripe\Security\BasicAuth:
+  entire_site_protected: true
+  entire_site_protected_code: 'ADMIN'
