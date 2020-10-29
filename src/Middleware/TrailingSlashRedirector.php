@@ -2,6 +2,7 @@
 
 namespace Education\Cwp\Middleware;
 
+use SilverStripe\Admin\AdminRootController;
 use SilverStripe\Control\Controller;
 use SilverStripe\Control\Director;
 use SilverStripe\Control\HTTPRequest;
@@ -18,9 +19,17 @@ class TrailingSlashRedirector implements HTTPMiddleware
     public function process(HTTPRequest $request, callable $delegate)
     {
         if ($request && ($request->isGET() || $request->isHEAD())) {
-            $requested_url = $_SERVER['REQUEST_URI'];
-            $expected_url = rtrim(Director::baseURL() . $request->getURL(), '/') . '/';
-            $urlPathInfo = pathinfo($requested_url);
+            $requestedUrl = $_SERVER['REQUEST_URI'];
+
+            // don't process any requested admin URL
+            if (strpos($requestedUrl, AdminRootController::admin_url()) !== false) {
+                $response = $delegate($request);
+
+                return $response;
+            }
+
+            $expectedUrl = rtrim(Director::baseURL() . $request->getURL(), '/') . '/';
+            $urlPathInfo = pathinfo($requestedUrl);
             $params = $request->getVars();
 
             if (isset($params['url'])) {
@@ -31,13 +40,13 @@ class TrailingSlashRedirector implements HTTPMiddleware
                 !Director::is_cli() &&
                 !isset($urlPathInfo['extension']) &&
                 empty($params) &&
-                !preg_match('/^' . preg_quote($expected_url, '/') . '(?!\/)/i', $requested_url)
+                !preg_match('/^' . preg_quote($expectedUrl, '/') . '(?!\/)/i', $requestedUrl)
             ) {
                 $params = $request->getVars();
-                $redirect_url = Controller::join_links($expected_url, '/');
+                $redirectUrl = Controller::join_links($expectedUrl, '/');
                 $response = new HTTPResponse();
 
-                return $response->redirect($redirect_url, 301);
+                return $response->redirect($redirectUrl, 301);
             }
         }
 
