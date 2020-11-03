@@ -40,7 +40,9 @@ SilverStripe\CMS\Controllers\CMSMain:
   extensions:
     - Terraformers\EmbargoExpiry\Extension\EmbargoExpiryCMSMainExtension
 SilverStripe\AssetAdmin\Forms\FileFormFactory:
-  show_history: true
-SilverStripe\AssetAdmin\Forms\FileFormFactory:
   extensions:
     - 'Education\Cwp\Extension\ImageFormFactoryExtension'
+  show_history: true
+SilverStripe\Control\Controller:
+  extensions:
+    - 'Education\Cwp\Extension\SecuredControllerExtension'
