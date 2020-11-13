@@ -17,3 +17,12 @@ li[aria-controls="Root_LinkTracking"] {
   overflow-y: scroll;
   overflow-x: hidden;
 }
+
+/* theme */
+.cms-sitename {
+  border-bottom-color: #1E2229;
+}
+
+.cms-menu__header {
+  background-color: #2C2C2C;
+}
