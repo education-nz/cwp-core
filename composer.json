@@ -25,6 +25,7 @@
         "wilr/silverstripe-tasker": "dev-master",
         "silverstripe/s3": "^1.0",
         "sentry/sdk": "^2.1",
+        "tractorcow/silverstripe-robots": "^4",
         "silverstripe/dynamodb": "^4.0",
         "education/tinymce-config": "^1",
         "education/login-screen": "^2",
@@ -34,8 +35,7 @@
         "jonom/silverstripe-betternavigator": "dev-master",
         "unclecheese/display-logic": "2.0.1",
         "quinninteractive/silverstripe-seo": "^1.0",
-        "silverstripe-terraformers/embargo-expiry": "^1.0",
-        "benmanu/silverstripe-simple-styleguide": "^2.1"
+        "silverstripe-terraformers/embargo-expiry": "^1.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.7",
