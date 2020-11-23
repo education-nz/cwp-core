@@ -21,8 +21,30 @@ li[aria-controls="Root_LinkTracking"] {
 /* theme */
 .cms-sitename {
   border-bottom-color: #1E2229;
+  justify-content: flex-start;
 }
 
-.cms-menu__header {
+.cms-menu__header,
+.cms-sitename:focus, .cms-sitename:hover,
+.cms-login-status .cms-login-status__logout-link:focus, .cms-login-status .cms-login-status__logout-link:hover {
+  background-color: #2C2C2C;
+}
+
+.cms-sitename .cms-sitename__link {
+  display: block;
+  width: 60px;
+  height: 53px;
+  background: url(../../silverstripe-ds/client/img/moe-logo-white.svg) no-repeat left center;
+}
+
+.collapsed .cms-sitename .cms-sitename__link {
+  background-position: center center;
+}
+
+.cms-sitename .cms-sitename__link:before {
+  display: none;
+}
+
+.cms-login-status .cms-login-status__profile-link:focus, .cms-login-status .cms-login-status__profile-link:hover {
   background-color: #2C2C2C;
 }
