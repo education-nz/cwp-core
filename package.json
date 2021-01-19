@@ -13,11 +13,6 @@
     "redux": "https://registry.npmjs.org/redux/-/redux-3.0.5.tgz"
   },
   "devDependencies": {
-    "@silverstripe/webpack-config": "^0.2.5",
-    "babel-core": "^6.24.1",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-es2016": "^6.24.1",
-    "eslint": "^4.18.2",
-    "eslint-config-airbnb": "^6.2.0"
+    "@silverstripe/webpack-config": "^1.7.0"
   }
 }

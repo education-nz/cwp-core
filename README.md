@@ -14,12 +14,12 @@ module provides standard fonts etc for ministry branding.
 
 ## Used on
 
- * education.govt.nz
- * parents.education.govt.nz
- * gazette.education.govt.nz
- * evaluationhub.education.govt.nz
- * tec.govt.nz
- * youthguarantee.net.nz
+ * https://www.education.govt.nz/
+ * https://parents.education.govt.nz/
+ * https://gazette.education.govt.nz/
+ * https://evaluationhub.education.govt.nz/
+ * https://connections.education.govt.nz/
+ * https://youthguarantee.education.govt.nz/
 
 ## What this doesn't include
 
@@ -33,7 +33,7 @@ Design System implemented in Silverstripe.
 
 ### Standard Base
 
-All CWP core, search, queued jobs and helpful additions.
+All core, search, queued jobs and helpful additions such as TinyMCE improvements
 
 ### Reports
 
@@ -41,12 +41,26 @@ Any editor can run the same generic reports across all our sites.
 
 ### Secure by default
 
-Built in CSP rules via the `SecuredControllerExtension` these rules can be
+Built-in CSP rules via the `SecuredControllerExtension` these rules can be
 extended if needed.
 
 ### Consistently good SEO
 
 SEO metadata for consistent editing and tools for achieving best results.
+
+## How-to
+
+### Build assets
+
+```
+cd /vendor/education/cwp-core/
+npm i
+npm run build
+```
+
+## See also
+
+-   [Design System](https://github.com/education-nz/silverstripe-ds)
 
 ## Copyright
 

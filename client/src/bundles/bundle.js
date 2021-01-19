@@ -1,1 +1,1 @@
-import 'bundles/require-alt-text.js';
+import "bundles/require-alt-text.js";
