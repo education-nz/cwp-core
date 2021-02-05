@@ -8,6 +8,9 @@ SilverStripe\Reports\ReportAdmin:
 SilverStripe\Reports\Reports:
   excluded_reports:
     - SilverStripe\CMS\Reports\RecentlyEditedReport
+SilverStripe\ORM\FieldType\DBDate:
+  extensions:
+    - Education\Cwp\Extension\DateExtension
 SilverStripe\CMS\Model\SiteTree:
   create_default_pages: false
   extensions:
