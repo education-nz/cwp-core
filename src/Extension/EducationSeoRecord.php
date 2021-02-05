@@ -4,7 +4,6 @@ namespace Education\Cwp\Extension;
 
 use SilverStripe\ORM\DataExtension;
 use SilverStripe\Forms\FieldList;
-use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\View\ArrayData;
 use SilverStripe\Lumberjack\Model\Lumberjack;
@@ -43,7 +42,7 @@ class EducationSeoRecord extends DataExtension
         if ($this->owner->Parent() && $this->owner->Parent()->hasExtension(Lumberjack::class)) {
             $type = 'article';
         } else {
-            $type = 'website ';
+            $type = 'website';
         }
 
         $templateData = new ArrayData([
