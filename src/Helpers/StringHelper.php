@@ -69,4 +69,17 @@ class StringHelper
                 || strrpos($haystack, $needle, -strlen($haystack)) !== false;
     }
 
+    /**
+     * Splits camelCase strings into regular words.
+     *
+     * @param $camelCaseString
+     *
+     * @return string
+     */
+    public static function fromCamelCase($camelCaseString)
+    {
+        $re = '/(?<=[a-z])(?=[A-Z])/x';
+        $a = preg_split($re, $camelCaseString);
+        return join($a, ' ');
+    }
 }
