@@ -75,7 +75,7 @@ class SecuredControllerExtension extends Extension
             $csp .= " img-src $knownDomainsInsecure 'self' data: https://googleads.g.doubleclick.net https://stats.g.doubleclick.net https://www.google.co.nz https://p.adsymptotic.com https://www.google.com https://px.ads.linkedin.com https://*.facebook.com https://*.google-analytics.com http://*.google-analytics.com https://*.swagger.io https://optimize.google.com;";
             $csp .= " font-src $knownDomains data: https://*.fontawesome.com https://*.typography.com https://maxcdn.bootstrapcdn.com https://fonts.gstatic.com;";
             $csp .= " object-src $knownDomains 'self';";
-            $csp .= " frame-src $knownDomainsInsecure 'self' https://www.facebook.com https://bid.g.doubleclick.net https://www.google.com data: https://*.youtube-nocookie.com https://player.vimeo.com https://*.youtube.com https://optimize.google.com https://www.googletagmanager.com/ns.html https://*.hotjar.com;";
+            $csp .= " frame-src $knownDomainsInsecure 'self' https://www.facebook.com https://staticcdn.co.nz https://bid.g.doubleclick.net https://www.google.com data: https://*.youtube-nocookie.com https://player.vimeo.com https://*.youtube.com https://optimize.google.com https://www.googletagmanager.com/ns.html https://*.hotjar.com;";
             $csp .= " child-src $knownDomains https://*.youtube-nocookie.com https://player.vimeo.com http://player.vimeo.com https://*.youtube.com  https://optimize.google.com https://www.googletagmanager.com/ns.html https://*.hotjar.com;";
             $csp .= " connect-src $knownDomains https://www.google-analytics.com/;";
             $csp .= " form-action $knownDomainsInsecure https://www.facebook.com 'self';";
