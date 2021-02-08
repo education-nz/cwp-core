@@ -49,3 +49,6 @@ SilverStripe\AssetAdmin\Forms\FileFormFactory:
 SilverStripe\Control\Controller:
   extensions:
     - 'Education\Cwp\Extension\SecuredControllerExtension'
+SilverStripe\Taxonomy\TaxonomyTerm:
+  extensions:
+    - 'Education\Cwp\Extension\EducationTaxonomyTermExtension'
