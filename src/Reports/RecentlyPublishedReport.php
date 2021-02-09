@@ -3,8 +3,6 @@
 namespace Education\Cwp\Reports;
 
 use SilverStripe\CMS\Model\SiteTree;
-use SilverStripe\ORM\FieldType\DBDatetime;
-use SilverStripe\ORM\DataObject;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\DateField;
 use SilverStripe\Reports\Report;
