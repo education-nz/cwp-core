@@ -77,7 +77,7 @@ class SecuredControllerExtension extends Extension
             $csp .= " object-src $knownDomains 'self';";
             $csp .= " frame-src $knownDomainsInsecure 'self' https://www.facebook.com https://staticcdn.co.nz https://bid.g.doubleclick.net https://www.google.com data: https://*.youtube-nocookie.com https://player.vimeo.com https://*.youtube.com https://optimize.google.com https://www.googletagmanager.com/ns.html https://*.hotjar.com;";
             $csp .= " child-src $knownDomains https://*.youtube-nocookie.com https://player.vimeo.com http://player.vimeo.com https://*.youtube.com  https://optimize.google.com https://www.googletagmanager.com/ns.html https://*.hotjar.com;";
-            $csp .= " connect-src $knownDomains https://*.algolia.net https://*.algolianet.com; https://www.google-analytics.com/;";
+            $csp .= " connect-src $knownDomains https://*.algolia.net https://*.algolianet.com https://www.google-analytics.com;";
             $csp .= " form-action $knownDomainsInsecure https://www.facebook.com 'self';";
             // phpcs:enable
 
