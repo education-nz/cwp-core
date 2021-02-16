@@ -42,6 +42,7 @@ SilverStripe\Control\Cookie:
 SilverStripe\CMS\Controllers\CMSMain:
   extensions:
     - Terraformers\EmbargoExpiry\Extension\EmbargoExpiryCMSMainExtension
+  enable_dynamic_archive_warning_message: false # 10x performance improvement, avoids CMSMain::getDecendants
 SilverStripe\AssetAdmin\Forms\FileFormFactory:
   extensions:
     - 'Education\Cwp\Extension\ImageFormFactoryExtension'
