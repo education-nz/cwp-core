@@ -12,6 +12,7 @@
     "prefer-stable": true,
     "require": {
         "cwp/cwp-recipe-cms": "^2.6@stable",
+        "silverstripe/recipe-reporting-tools": "@stable",
 	    "silverstripe/serve": "^2.1",
         "silverstripe/redirectedurls": "^2.0",
         "silverstripe/contentreview": "^4.1",
