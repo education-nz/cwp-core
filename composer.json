@@ -21,7 +21,7 @@
         "silverstripe/iframe": "^2.0",
         "silverstripe/tagfield": "2.1",
         "silverstripe/sqlite3": "^2",
-        "silverstripe/gridfieldqueuedexport": "2.x-dev",
+        "silverstripe/gridfieldqueuedexport": "^2",
         "education/google-analytics": "dev-master",
         "wilr/silverstripe-tasker": "dev-master",
         "silverstripe/s3": "^1.0",
