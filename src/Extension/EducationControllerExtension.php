@@ -31,7 +31,7 @@ class EducationControllerExtension extends Extension
      */
     public function getEncodedTitle($limit = 200)
     {
-        $title = $this->Title;
+        $title = $this->owner->Title;
 
         if ($limit) {
             $title = substr($title, 0, $limit);
@@ -55,7 +55,7 @@ class EducationControllerExtension extends Extension
      */
     public function getEncodedSummary($limit = 1024)
     {
-        $summary = $this->Intro ? $this->Intro : Convert::html2raw($this->Content);
+        $summary = $this->owner->Intro ? $this->owner->Intro : Convert::html2raw($this->owner->Content);
 
         if ($limit) {
             $summary = substr($summary, 0, $limit);
