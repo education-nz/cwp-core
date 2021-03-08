@@ -1,3 +1,6 @@
 SilverStripe\Forms\FormField:
   extensions:
     - EducationFormFieldExtension
+SilverStripe\Control\Controller:
+  extensions:
+    - Education\Cwp\Extension\EducationControllerExtension
