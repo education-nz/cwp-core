@@ -2,26 +2,14 @@
 Name: education-cwp
 After: "databaseconnectors"
 ---
-SilverStripe\Reports\ReportAdmin:
-  extensions:
-    - Education\Cwp\Extension\ReportAdminExtension
 SilverStripe\Reports\Reports:
   excluded_reports:
     - SilverStripe\CMS\Reports\RecentlyEditedReport
-SilverStripe\ORM\FieldType\DBDate:
-  extensions:
-    - Education\Cwp\Extension\DateExtension
 SilverStripe\CMS\Model\SiteTree:
   create_default_pages: false
   extensions:
     - Education\Cwp\Extension\EducationSeoRecord
     - Terraformers\EmbargoExpiry\Extension\EmbargoExpiryExtension
-SilverStripe\SiteConfig\SiteConfig:
-  extensions:
-    - 'Education\Cwp\Extension\EducationCwpSiteConfig'
-SilverStripe\Assets\File:
-  extensions:
-    - 'Education\Cwp\Extension\EducationFileExtension'
 SilverStripe\ORM\Connect\DBSchemaManager:
   fix_table_case_on_build: true
 SilverStripe\Core\Injector\Injector:
@@ -47,9 +35,3 @@ SilverStripe\AssetAdmin\Forms\FileFormFactory:
   extensions:
     - 'Education\Cwp\Extension\ImageFormFactoryExtension'
   show_history: true
-SilverStripe\Control\Controller:
-  extensions:
-    - 'Education\Cwp\Extension\SecuredControllerExtension'
-SilverStripe\Taxonomy\TaxonomyTerm:
-  extensions:
-    - 'Education\Cwp\Extension\EducationTaxonomyTermExtension'

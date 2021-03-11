@@ -1,5 +1,7 @@
 <?php
 
+namespace Education\Cwp\Extension;
+
 use SilverStripe\Core\Extension;
 
 class EducationFormFieldExtension extends Extension

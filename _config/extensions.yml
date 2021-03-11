@@ -1,6 +1,24 @@
 SilverStripe\Forms\FormField:
   extensions:
-    - EducationFormFieldExtension
+    - Education\Cwp\Extension\EducationFormFieldExtension
 SilverStripe\Control\Controller:
   extensions:
     - Education\Cwp\Extension\EducationControllerExtension
+SilverStripe\Control\Controller:
+  extensions:
+    - Education\Cwp\Extension\SecuredControllerExtension
+SilverStripe\Taxonomy\TaxonomyTerm:
+  extensions:
+    - 'Education\Cwp\Extension\EducationTaxonomyTermExtension'
+SilverStripe\Reports\ReportAdmin:
+  extensions:
+    - Education\Cwp\Extension\ReportAdminExtension
+SilverStripe\ORM\FieldType\DBDate:
+  extensions:
+    - Education\Cwp\Extension\DateExtension
+SilverStripe\SiteConfig\SiteConfig:
+  extensions:
+    - Education\Cwp\Extension\EducationCwpSiteConfig
+SilverStripe\Assets\File:
+  extensions:
+    - Education\Cwp\Extension\EducationFileExtension

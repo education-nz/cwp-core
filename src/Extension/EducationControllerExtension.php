@@ -6,6 +6,7 @@ use Page;
 use SilverStripe\Control\Director;
 use SilverStripe\Core\Convert;
 use SilverStripe\Core\Extension;
+use SilverStripe\Core\Injector\Injector;
 use SilverStripe\SiteConfig\SiteConfig;
 
 class EducationControllerExtension extends Extension
@@ -93,5 +94,43 @@ class EducationControllerExtension extends Extension
             SiteConfig::current_site_config()->ID . '-' .
                 SiteConfig::current_site_config()->dbObject('LastEdited')->getTimestamp()
         );
+    }
+
+    public function AlgoliaApplicationID()
+    {
+        if (class_exists('Wilr\SilverStripe\Algolia\Service\AlgoliaService')) {
+            $service = Injector::inst()->get('Wilr\SilverStripe\Algolia\Service\AlgoliaService');
+
+            return $service->applicationId;
+        }
+    }
+
+    public function AlgoliaApiKey()
+    {
+        if (class_exists('Wilr\SilverStripe\Algolia\Service\AlgoliaService')) {
+            $service = Injector::inst()->get('Wilr\SilverStripe\Algolia\Service\AlgoliaService');
+
+            return $service->searchApiKey;
+        }
+    }
+
+    public function AlgoliaIndex()
+    {
+        if (class_exists('Wilr\SilverStripe\Algolia\Service\AlgoliaService')) {
+            $service = Injector::inst()->get('Wilr\SilverStripe\Algolia\Service\AlgoliaService');
+
+            if (!function_exists('array_key_first')) {
+                function array_key_first(array $arr) {
+                    foreach($arr as $key => $unused) {
+                        return $key;
+                    }
+                    return NULL;
+                }
+            }
+
+            $first = array_key_first($service->indexes);
+
+            return $service->environmentizeIndex($first);
+        }
     }
 }
