@@ -4,8 +4,6 @@ SilverStripe\Forms\FormField:
 SilverStripe\Control\Controller:
   extensions:
     - Education\Cwp\Extension\EducationControllerExtension
-SilverStripe\Control\Controller:
-  extensions:
     - Education\Cwp\Extension\SecuredControllerExtension
 SilverStripe\Taxonomy\TaxonomyTerm:
   extensions:
