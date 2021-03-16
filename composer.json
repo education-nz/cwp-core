@@ -23,6 +23,7 @@
         "silverstripe/sqlite3": "^2",
         "silverstripe/gridfieldqueuedexport": "^2",
         "education/google-analytics": "dev-master",
+        "education/silverstripe-ds": "^1",
         "wilr/silverstripe-tasker": "dev-master",
         "silverstripe/s3": "^1.0",
         "sentry/sdk": "^2.1",
